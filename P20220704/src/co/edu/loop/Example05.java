@@ -10,14 +10,14 @@ public class Example05 {
 		int temp2 = 0;
 		temp = (int) (Math.random() * 6) + 1;
 		temp2 = (int) (Math.random() * 6) + 1;
+		System.out.println(temp + temp2);
 		
-		while(true) {
-			System.out.println(temp + temp2);
+	
 			if(temp + temp2 == 5) {
 				System.out.println("합이 5가 되어 종료합니다.");
-			} else 
-				continue;
+			}else 
+				System.out.println();
 			
-		}
+		
 	}
 }
