@@ -8,7 +8,7 @@ public class ForExample01 {
 		tempAry = new int[] {3,4,5,6,7};
 		for (int i = 0; i < tempAry.length; i++) {
 			tempAry[i] = (int)(Math.random()*50);
-//           System.out.println(tempAry[i]);
+           System.out.println(tempAry[i]);
 		}
 		
 		// 제일 큰값을 max;
