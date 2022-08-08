@@ -3,7 +3,7 @@ package com.bank.account;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bank.common.DAO;
+import com.coffee.common.DAO;
 
 public class AccountManage extends DAO{
 	// 싱글톤

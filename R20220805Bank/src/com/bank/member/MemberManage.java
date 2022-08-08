@@ -1,6 +1,6 @@
 package com.bank.member;
 
-import com.bank.common.DAO;
+import com.coffee.common.DAO;
 
 public class MemberManage extends DAO{
 	

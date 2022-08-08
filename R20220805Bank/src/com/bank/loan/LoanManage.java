@@ -3,7 +3,7 @@ package com.bank.loan;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bank.common.DAO;
+import com.coffee.common.DAO;
 
 public class LoanManage extends DAO{
 	
