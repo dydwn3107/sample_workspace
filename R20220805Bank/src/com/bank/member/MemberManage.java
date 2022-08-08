@@ -19,7 +19,7 @@ public class MemberManage extends DAO{
 		Member member = null;
 		try {
 			conn();
-			String sql = "select * from member where member_id = ?";
+			String sql = "select * from bankmember where member_id = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			
@@ -27,7 +27,7 @@ public class MemberManage extends DAO{
 			
 			if(rs.next()) {
 				member = new Member();
-				member.setAccountId(rs.getString("member_id"));
+				member.setMemberId(rs.getString("member_id"));
 				member.setMemberPw(rs.getString("member_pw"));
 				member.setMemberName(rs.getString("member_name"));
 				member.setRole(rs.getString("role"));
@@ -46,8 +46,8 @@ public class MemberManage extends DAO{
 		int result = 0;
 		try {
 			conn();
-			String sql = "insert into bankmember (member_id, member_pw,"
-					+ " member_name, member_role)";
+			String sql = "insert into bankmember (member_id, member_pw, "
+					+ "member_name, role) values (?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, member.getMemberId());
 			pstmt.setString(2, member.getMemberPw());
@@ -57,7 +57,7 @@ public class MemberManage extends DAO{
 			result = pstmt.executeUpdate();
 			
 		}catch (Exception e) {
-			
+			e.printStackTrace();
 		}finally {
 			disconnect();
 		}
